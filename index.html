@@ -84,6 +84,100 @@ p,.lead,.card p,.visit p,.about p{line-height:1.75}
 .socials .btn:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 .socials .btn.light::before{background:linear-gradient(110deg,transparent 20%,#2d665a0c 42%,#2d665a30 50%,#2d665a0c 58%,transparent 80%)}
 @media(prefers-reduced-motion:reduce){.socials .btn,.socials .btn::before{transition:none}.socials .btn:hover{transform:none}}
+
+/* Mobile-first refinement: cleaner spacing, tap targets and no cramped cards */
+html{scroll-padding-top:78px}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+@media(max-width:700px){
+  .wrap{width:min(100% - 32px,520px)}
+  .announcement{padding:8px 10px;font-size:.58rem;letter-spacing:.1em}
+  header{background:#f7f5eff5}
+  .nav{height:66px;gap:10px}
+  .brand{gap:8px;min-width:0}
+  .brand .mark{width:35px;height:35px;flex:0 0 35px;font-size:1.2rem}
+  .brand strong{font-size:.91rem;letter-spacing:.015em;white-space:nowrap}
+  .brand small{font-size:.53rem;letter-spacing:.075em}
+  .toggle{min-height:44px;min-width:78px;border-radius:4px;font:700 .82rem "DM Sans",sans-serif;cursor:pointer}
+  .navlinks{top:66px;padding:12px 16px 18px;box-shadow:0 18px 24px #173f3812}
+  .navlinks>a:not(.btn){min-height:46px;display:flex;align-items:center;font-size:.94rem}
+  .navlinks .reserve-btn{margin-top:12px}
+  .hero{padding:30px 0 42px}
+  .heroGrid{gap:26px}
+  .eyebrow{font-size:.63rem;letter-spacing:.13em;margin-bottom:15px}
+  h1{font-size:clamp(2.7rem,11.8vw,4rem);line-height:1.04;letter-spacing:-.045em}
+  .lead{font-size:.94rem;line-height:1.7;margin:18px 0 22px}
+  .actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .actions .btn{width:100%;min-height:48px}
+  .note{margin-top:19px;font-size:.73rem}
+  .heroVisual{min-height:clamp(300px,88vw,390px)}
+  .heroPhoto{inset:0 16px 22px 0;border-radius:135px 135px 3px 3px}
+  .photoLabel{right:0;bottom:0;max-width:190px;padding:13px 15px}
+  .photoLabel span{font-size:.59rem}
+  .photoLabel strong{font-size:1.1rem}
+  .section{padding:54px 0}
+  .aboutGrid{gap:24px}
+  .about h2,.head h2,.visit h2,.contact h2{font-size:clamp(2.15rem,9vw,3.1rem);line-height:1.08}
+  .about p,.visit p{font-size:.91rem;line-height:1.72}
+  .aboutImg{height:clamp(240px,72vw,330px)}
+  .about .btn,.visit .btn{min-height:48px}
+  .head{margin-bottom:24px}
+  .head p{font-size:.88rem;line-height:1.7}
+  .menuGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  .card{min-width:0;padding:8px 8px 13px;border-radius:3px}
+  .card:hover{transform:none;box-shadow:none}
+  .card img{height:clamp(112px,34vw,165px);margin-bottom:11px;border-radius:2px}
+  .itemTop{display:flex;flex-direction:column;gap:4px}
+  .card h3{font-size:clamp(.96rem,4vw,1.13rem);line-height:1.2;overflow-wrap:anywhere}
+  .price{white-space:normal;font-size:.68rem;line-height:1.35}
+  .card p{font-size:.76rem;line-height:1.6}
+  .smallNote{font-size:.72rem;line-height:1.65}
+  .galleryGrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:clamp(130px,42vw,190px) clamp(115px,34vw,155px) clamp(115px,34vw,155px);gap:8px}
+  .galleryGrid img{min-width:0;border-radius:3px}
+  .galleryGrid img:first-child{grid-row:span 2}
+  .galleryGrid img:last-child{grid-column:span 2}
+  .visitGrid{gap:25px}
+  .detail{gap:11px;margin:16px 0}
+  .detailIcon{width:40px;height:40px;flex-basis:40px}
+  .detail span{font-size:.82rem;line-height:1.55}
+  .mapCard{min-height:275px;padding:22px 18px}
+  .mapInner h3{font-size:1.8rem}
+  .mapInner p{font-size:.86rem}
+  .contactGrid{gap:27px}
+  .contactCopy{font-size:.91rem;line-height:1.7}
+  .socials{display:grid;grid-template-columns:1fr;gap:10px}
+  .socials .btn{width:100%;min-height:48px}
+  .form{padding:16px 14px;border-radius:4px}
+  .formRow{grid-template-columns:1fr;gap:0}
+  label{font-size:.82rem}
+  input,select,textarea{min-height:47px;font-size:16px;padding:12px}
+  textarea{min-height:100px}
+  .form button[type="submit"]{width:100%;min-height:50px;padding:13px 12px;font-size:.82rem}
+  .formNote{line-height:1.6}
+  .footerRow{gap:20px}
+  .footerLinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;width:100%}
+  .footerLinks a{min-height:38px;display:flex;align-items:center}
+  .copyright{line-height:1.7}
+  .disclaimer{line-height:1.65}
+  .reserve-btn{animation:reserveFloat 3.2s ease-in-out infinite}
+}
+@media(max-width:390px){
+  .wrap{width:calc(100% - 28px)}
+  .brand strong{font-size:.82rem}
+  .brand small{font-size:.49rem;letter-spacing:.06em}
+  .nav{gap:7px}
+  .toggle{min-width:68px;padding:8px}
+  .menuGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card img{height:115px}
+  .card h3{font-size:.94rem}
+  .card p{font-size:.73rem}
+  .price{font-size:.64rem}
+  .section{padding:48px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .reserve-btn{animation:none}
+  .card:hover,.btn:hover,.socials .btn:hover{transform:none}
+}
+
 </style></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
