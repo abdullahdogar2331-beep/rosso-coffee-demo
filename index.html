@@ -57,6 +57,15 @@ p,.lead,.card p,.visit p,.about p{line-height:1.75}
 @keyframes formCtaPulse{0%,100%{box-shadow:0 4px 0 #0e2e28,0 8px 20px #173f3822}50%{box-shadow:0 4px 0 #0e2e28,0 11px 26px #173f3838}}
 @keyframes formCtaShine{0%,55%,100%{transform:translateX(-130%)}72%{transform:translateX(130%)}}
 @media(prefers-reduced-motion:reduce){.form button[type="submit"],.form button[type="submit"]::before{animation:none}}
+
+/* Social/contact buttons: elegant shimmer and gentle lift */
+.socials .btn{position:relative;isolation:isolate;overflow:hidden;gap:9px;box-shadow:0 3px 0 #0e2e2818;transition:transform .28s ease,box-shadow .28s ease,background .28s ease}
+.socials .btn::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(110deg,transparent 20%,#ffffff20 42%,#ffffff70 50%,#ffffff20 58%,transparent 80%);transform:translateX(-130%);transition:transform .7s ease}
+.socials .btn:hover{transform:translateY(-4px);box-shadow:0 8px 18px #173f3826}
+.socials .btn:hover::before,.socials .btn:focus-visible::before{transform:translateX(130%)}
+.socials .btn:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
+.socials .btn.light::before{background:linear-gradient(110deg,transparent 20%,#2d665a0c 42%,#2d665a30 50%,#2d665a0c 58%,transparent 80%)}
+@media(prefers-reduced-motion:reduce){.socials .btn,.socials .btn::before{transition:none}.socials .btn:hover{transform:none}}
 </style></head>
 <body>
 <div class="announcement">A little pause. A better cup. · Islamabad</div>
