@@ -11,6 +11,22 @@
 @media(max-width:900px){.navlinks{gap:14px}.heroGrid{gap:30px}.heroVisual{min-height:420px}.aboutGrid{gap:35px}.menuGrid{grid-template-columns:repeat(2,1fr)}.contactGrid{gap:35px}}
 @media(max-width:700px){.wrap{width:calc(100% - 30px)}.announcement{font-size:.63rem}.nav{height:68px}.brand strong{font-size:1.02rem}.mark{width:37px;height:37px}.toggle{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);padding:17px 22px 22px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navlinks>a:not(.btn){padding:11px 0;border-bottom:1px solid var(--line)}.navlinks .btn{margin-top:13px}.hero{padding:35px 0 52px}.heroGrid,.aboutGrid,.visitGrid,.contactGrid{grid-template-columns:1fr;gap:32px}h1{font-size:clamp(3rem,13vw,4.4rem)}.lead{font-size:.95rem}.heroVisual{min-height:385px}.heroPhoto{inset:0 18px 24px 0;border-radius:145px 145px 3px 3px}.photoLabel{padding:15px 17px;max-width:190px}.section{padding:64px 0}.head{display:block;margin-bottom:28px}.head p{margin-top:14px}.aboutImg{height:330px;order:2;border-radius:3px 95px 3px 3px}.aboutContent{order:1}.menuGrid{gap:10px}.card{padding:9px 9px 15px}.card img{height:145px;margin-bottom:12px}.card h3{font-size:1.05rem}.card p{font-size:.77rem}.price{font-size:.7rem}.galleryGrid{grid-template-columns:1fr 1fr;grid-template-rows:175px 145px 145px;gap:9px}.mapCard{min-height:300px}.form{padding:18px}.formRow{grid-template-columns:1fr;gap:0}.footerRow{align-items:flex-start;flex-direction:column}.footerLinks{gap:13px}}
 @media(max-width:390px){.menuGrid{grid-template-columns:1fr}.card img{height:195px}.actions .btn{width:100%}}
+
+/* Typography polish: clearer brand, headings, and body copy */
+.brand strong{font-family:"DM Sans",sans-serif;font-size:1.08rem;font-weight:800;letter-spacing:.035em;line-height:1.2;color:var(--g);text-rendering:optimizeLegibility}
+.brand small{font-family:"DM Sans",sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.12em;color:#4d5e55;line-height:1.4}
+.mark{font-family:"Playfair Display",serif;font-weight:700;font-size:1.4rem}
+h1,h2,h3{font-weight:600;text-wrap:balance;text-rendering:optimizeLegibility}
+h1{letter-spacing:-.035em;line-height:1.08}
+h1 em{font-weight:600;color:#6f8d73}
+body{font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+p,.lead,.card p,.visit p,.about p{line-height:1.75}
+.navlinks{font-weight:600;color:#293b33}
+.eyebrow{font-weight:800;letter-spacing:.16em}
+.btn{font-weight:700;letter-spacing:.01em}
+.photoLabel strong{font-weight:600}
+@media(max-width:600px){.brand strong{font-size:1rem;letter-spacing:.02em}.brand small{font-size:.59rem;letter-spacing:.09em}h1{line-height:1.06}}
+
 </style></head>
 <body>
 <div class="announcement">A little pause. A better cup. · Islamabad</div>
