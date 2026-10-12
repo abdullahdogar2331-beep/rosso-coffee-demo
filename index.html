@@ -47,6 +47,16 @@ p,.lead,.card p,.visit p,.about p{line-height:1.75}
 @keyframes reserveShiver{0%,78%,100%{transform:translateX(-130%)}80%{transform:translateX(-115%)}82%{transform:translateX(-140%)}84%{transform:translateX(-110%)}86%{transform:translateX(-130%)}90%{transform:translateX(130%)} }
 @media(prefers-reduced-motion:reduce){.reserve-btn{animation:none;translate:none;rotate:none}.reserve-btn::before{animation:none}}
 
+
+/* Reservation form CTA: soft pulse, moving highlight and arrow nudge */
+.form button[type="submit"]{position:relative;isolation:isolate;overflow:hidden;gap:10px;font-family:"DM Sans",sans-serif;font-weight:800;letter-spacing:.015em;border-radius:4px;box-shadow:0 4px 0 #0e2e28,0 8px 20px #173f3822;animation:formCtaPulse 2.8s ease-in-out infinite}
+.form button[type="submit"]::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(105deg,transparent 20%,#ffffff18 40%,#ffffff65 50%,#ffffff18 60%,transparent 80%);transform:translateX(-130%);animation:formCtaShine 3.6s ease-in-out infinite}
+.form button[type="submit"]::after{content:"↗";display:inline-block;font-size:1rem;transition:transform .25s ease}
+.form button[type="submit"]:hover{transform:translateY(-3px);box-shadow:0 7px 0 #0e2e28,0 13px 25px #173f3840}
+.form button[type="submit"]:hover::after{transform:translate(3px,-2px)}
+@keyframes formCtaPulse{0%,100%{box-shadow:0 4px 0 #0e2e28,0 8px 20px #173f3822}50%{box-shadow:0 4px 0 #0e2e28,0 11px 26px #173f3838}}
+@keyframes formCtaShine{0%,55%,100%{transform:translateX(-130%)}72%{transform:translateX(130%)}}
+@media(prefers-reduced-motion:reduce){.form button[type="submit"],.form button[type="submit"]::before{animation:none}}
 </style></head>
 <body>
 <div class="announcement">A little pause. A better cup. · Islamabad</div>
