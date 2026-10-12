@@ -27,10 +27,23 @@ p,.lead,.card p,.visit p,.about p{line-height:1.75}
 .photoLabel strong{font-weight:600}
 @media(max-width:600px){.brand strong{font-size:1rem;letter-spacing:.02em}.brand small{font-size:.59rem;letter-spacing:.09em}h1{line-height:1.06}}
 
+
+/* Premium reservation CTA: clear type + subtle attention-grabbing motion */
+.reserve-btn{position:relative;isolation:isolate;overflow:hidden;gap:11px;padding:13px 19px;font-family:"DM Sans",sans-serif;font-size:.84rem;font-weight:800;letter-spacing:.025em;white-space:nowrap;border-radius:4px;box-shadow:0 5px 0 #0e2e28,0 9px 22px #173f3824;animation:reserveFloat 3.2s ease-in-out infinite}
+.reserve-btn::before{content:"";position:absolute;z-index:-1;inset:-1px;background:linear-gradient(110deg,transparent 15%,#ffffff22 38%,#ffffff62 50%,#ffffff20 62%,transparent 82%);transform:translateX(-130%);animation:reserveShine 4.2s ease-in-out infinite}
+.reserve-btn::after{content:"";position:absolute;inset:0;border:1px solid #ffffff24;border-radius:inherit;pointer-events:none}
+.reserve-btn:hover{transform:translateY(-3px);box-shadow:0 7px 0 #0e2e28,0 13px 28px #173f3840}
+.reserve-arrow{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#ffffff1b;font-size:1rem;line-height:1;transition:transform .25s ease,background .25s ease}
+.reserve-btn:hover .reserve-arrow{transform:translate(3px,-2px);background:#ffffff2e}
+@keyframes reserveShine{0%,58%,100%{transform:translateX(-130%)}75%{transform:translateX(130%)}}
+@keyframes reserveFloat{0%,100%{box-shadow:0 5px 0 #0e2e28,0 9px 22px #173f3824}50%{box-shadow:0 5px 0 #0e2e28,0 12px 27px #173f3835}}
+@media(prefers-reduced-motion:reduce){.reserve-btn,.reserve-btn::before{animation:none}.reserve-btn,.reserve-arrow{transition:none}}
+@media(max-width:600px){.reserve-btn{justify-content:center;width:100%;font-size:.9rem;padding:14px 18px}}
+
 </style></head>
 <body>
 <div class="announcement">A little pause. A better cup. · Islamabad</div>
-<header><div class="wrap nav"><a class="brand" href="#home"><span class="mark">R</span><span><strong>ROSSO COFFEE CO.</strong><small>Good coffee, good company</small></span></a><button class="toggle" id="toggle" aria-expanded="false" aria-controls="links">Menu ☰</button><nav class="navlinks" id="links"><a href="#about">Our Story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Find Us</a><a class="btn" href="#reservation">Book a Table ↗</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="#home"><span class="mark">R</span><span><strong>ROSSO COFFEE CO.</strong><small>Good coffee, good company</small></span></a><button class="toggle" id="toggle" aria-expanded="false" aria-controls="links">Menu ☰</button><nav class="navlinks" id="links"><a href="#about">Our Story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Find Us</a><a class="btn reserve-btn" href="#reservation"><span>Book a Table</span><span class="reserve-arrow" aria-hidden="true">↗</span></a></nav></div></header>
 <main>
 <section class="hero" id="home"><div class="wrap heroGrid"><div><div class="eyebrow">Your everyday coffee ritual</div><h1>A slower moment. <em>A better brew.</em></h1><p class="lead">Thoughtfully brewed coffee, comforting plates, and a welcoming corner of Islamabad to make a little room for yourself.</p><div class="actions"><a class="btn" href="#menu">Explore Menu ↗</a><a class="btn light" href="#visit">Find Our Cafe</a></div><p class="note">● Specialty coffee · Brunch · Good company</p></div><div class="heroVisual"><div class="heroPhoto"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=90" alt="Freshly prepared coffee on a cafe table"></div><div class="photoLabel"><span>Made for the moment</span><strong>Your seat is waiting.</strong></div></div></div></section>
 <section class="section about" id="about"><div class="wrap aboutGrid"><div class="aboutImg"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="Warm cafe interior"></div><div class="aboutContent"><div class="eyebrow">A little about us</div><h2>More than coffee.<br>It's how you feel.</h2><p>Some days call for a strong espresso. Others call for a long brunch and nowhere else to be. Rosso is imagined as a place for both.</p><p>Come for a carefully made cup, stay for the conversation, and leave with a little more energy for whatever comes next.</p><a class="btn" href="#visit">Come Say Hello ↗</a></div></div></section>
